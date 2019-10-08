@@ -1,25 +1,41 @@
+// Напиши функцию countTotalSalary(employees) принимающую объект зарплат. 
+// Функция считает общую сумму запрплаты работников и возращает ее. 
+// Каждое поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата".
+
+// Вызовы функции для проверки работоспособности твоей реализации.
+
+
 'use strict';
-const pricePerDroid = 3000;
-let credits = 23580;
-let quantityDroids;
-let totalPrice;
-let message;
 
-quantityDroids = prompt('Тебе сколько дроидов? ', '');
+let totalSum = 0;
 
-if (quantityDroids === null) {
-  console.log('Отменено пользователем!');
-} else {
-  totalPrice = quantityDroids * pricePerDroid;
-} 
-
-if (totalPrice > credits) {
-  console.log('Недостаточно средств на счету!');
-} else {
-  credits = credits - totalPrice;
-  console.log(`Вы купили ${quantityDroids} дроидов, на счету осталось ${credits} кредитов.`);
+const countTotalSalary = function(employees) {
+  const key = Object.keys (employees);
+  let totalSum = 0;
+    for (let key in employees) {
+        totalSum += employees[key];
+    }
+    return totalSum;
 }
 
+
+console.log(countTotalSalary({})); // 0
+
+console.log(
+  countTotalSalary({
+    mango: 100,
+    poly: 150,
+    alfred: 80,
+  }),
+); // 330
+
+console.log(
+  countTotalSalary({
+    kiwi: 200,
+    lux: 50,
+    chelsy: 150,
+  }),
+); // 400
 
 
 
