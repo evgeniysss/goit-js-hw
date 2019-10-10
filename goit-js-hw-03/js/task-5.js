@@ -17,8 +17,11 @@ const getAllPropValues = function(arr, prop) {
     let massive  = [];
     
     for (let item of arr) {
-        // console.log(item[prop]);
-        massive.push(item[prop]);
+        if (item[prop]) {
+            massive.push(item[prop]);
+        } else {
+            continue
+        }
     }
     return massive;
 }
@@ -32,5 +35,5 @@ console.log(getAllPropValues(products, 'name'));
 console.log(getAllPropValues(products, 'quantity')); 
 // [4, 3, 7, 2]
 
-console.log(getAllPropValues(products, 'price')); 
+console.log(getAllPropValues(products, 'category')); 
 // []
