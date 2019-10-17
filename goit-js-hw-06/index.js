@@ -3,6 +3,7 @@ console.log('users:', users);
 
 // "use strict";
 
+//=====================================================
 // Задание 1
 // Получить массив имен всех пользователей (поле name).
 
@@ -24,6 +25,7 @@ console.log('users:', users);
   // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
 
+//=====================================================
 // Задание 2
 // Получить массив объектов пользователей по цвету глаз (поле eyeColor).
 
@@ -36,6 +38,7 @@ console.log('users:', users);
 //   console.log(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
 
+//=====================================================
 // Задание 3
 // Получить массив имен пользователей по полу (поле gender).
 
@@ -48,6 +51,7 @@ console.log('users:', users);
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
   
 
+//=====================================================
 // Задание 4
 // Получить массив только неактивных пользователей (поле isActive).
 
@@ -62,6 +66,7 @@ console.log('users:', users);
 // console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 
 
+//=====================================================
 // Задание 5
 // Получить пользоваля (не массив) по email (поле email, он уникальный).
 
@@ -76,6 +81,7 @@ console.log('users:', users);
 // console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
 
 
+//=====================================================
 // Задание 6
 // Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age).
 
@@ -92,6 +98,7 @@ console.log('users:', users);
 // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 
 
+//=====================================================
 // Задание 7
 // Получить общую сумму баланса (поле balance) всех пользователей.
 
@@ -106,15 +113,51 @@ console.log('users:', users);
 // console.log(calculateTotalBalance(users)); // 20916
 
 
+//=====================================================
 // Задание 8
 // Массив имен всех пользователей у которых есть друг с указанным именем.
 
 
-const getUsersWithFriend = (users, friendName) => {
-  return users
-  .filter (user => user.friends.includes (friendName))
-  .map(user => user.name);
-};
+// const getUsersWithFriend = (users, friendName) => {
+//   return users
+//   .filter (user => user.friends.includes (friendName))
+//   .map(user => user.name);
+// };
 
-console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+// console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+// console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
+
+//=====================================================
+// Задание 9
+// Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
+
+
+// const getNamesSortedByFriendsCount = users => {
+//   const people = users
+//   .sort((e, r) => r.friends.length - e.friends.length)
+//   .map(user => user.name)
+//   return people
+// };
+
+// console.log(getNamesSortedByFriendsCount(users));
+// // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+
+
+//=====================================================
+// Задание 10
+// Получить массив всех умений всех пользователей (поле skills), 
+// при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
+
+// const getSortedUniqueSkills = users => {
+//   let resArr = [];
+//   const newArr = users.map(el => (resArr = [...resArr, ...el.skills]));
+//   const skillsArr = resArr.filter((item, idx) => {
+//     return idx === resArr.indexOf(item);
+//   });
+//   return skillsArr.sort();
+// };
+// console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+

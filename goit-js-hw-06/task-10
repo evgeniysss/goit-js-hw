@@ -1,0 +1,55 @@
+// Задание 10
+// Получить массив всех умений всех пользователей (поле skills), 
+// при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
+
+// const getSortedUniqueSkills = users => {
+//   let resArr = [];
+//   const newArr = users.map(el => (resArr = [...resArr, ...el.skills]));
+//   const skillsArr = resArr.filter((item, idx) => {
+//     return idx === resArr.indexOf(item);
+//   });
+//   return skillsArr.sort();
+// };
+// console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+
+// Задание 10
+
+// const getSortedUniqueSkills = (arr) => {
+//   const skills = [];
+//   arr.forEach(element => {
+//     skills.push(...element.skills);
+//   });
+//   console.log('skills :', skills);
+//   const unique = [];
+//   skills.forEach(el => {
+//     console.log('el :', el);
+//     console.log('skills.includes(el) !== true :', skills.includes(el) !== true);
+//     !unique.includes(el) && unique.push(el);
+  
+//   })
+//   console.log('unique :', unique);
+// };
+
+// getSortedUniqueSkills (users);
+
+// console.log(getSortedUniqueSkills(users));
+// // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+
+// Задание 10
+
+
+// const unique = arr.reduce((acc, el) => {
+// acc.push (...el.skills);
+// return acc;
+// }. [])
+// .reduce((acc, el) => {
+//   return !acc.includes(el) && acc.push(el) && acc;
+// }, []);
+// .sort();
+// console.log('unique :', unique);
+
+
+// getSortedUniqueSkills (users);
