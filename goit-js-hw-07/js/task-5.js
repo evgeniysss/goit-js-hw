@@ -9,7 +9,7 @@ const output = document.querySelector("#name-output");
 
 function getName (e)  {
     output.textContent = input.value;
-    if (input === "") {
+    if (input.value === "") {
         output.textContent = "Незнакомец"
     }
 }

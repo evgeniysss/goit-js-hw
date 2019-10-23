@@ -2,7 +2,7 @@
 
 'use strict';
 
-const ourCategories = document.querySelector('#categories > li');
+// const ourCategories = document.querySelector('#categories > li');
 const liItem = document.querySelectorAll('.item');
 console.log (`В списке ${liItem.length}`);
 console.log ('liItem', liItem);
